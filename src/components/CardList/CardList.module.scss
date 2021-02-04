@@ -1,0 +1,23 @@
+.cardList{
+    padding-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: space-evenly;
+    justify-content: space-evenly;
+}
+
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    width: 250px;
+    align-items: space-evenly;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+@media screen and (max-width: 680px) {
+    .card {
+        width: 240px;
+    }
+}
