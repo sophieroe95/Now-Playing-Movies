@@ -1,6 +1,7 @@
 .filter{
     text-align: center;
     font-size: larger;
+    width: 100%;
 }
 
 .open {
@@ -12,4 +13,10 @@ button {
     border-radius: 20px;
     font-size: large;
     background-color: rgb(154, 231, 231);
+}
+
+@media screen and (min-width: 680px) {
+    .filter {
+        width: 33%;
+    }
 }
