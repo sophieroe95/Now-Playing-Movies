@@ -2,12 +2,17 @@ import React from "react";
 import styles from "./Dashboard.module.scss";
 import CardList from "../CardList";
 import FeedbackPanel from "../FeedbackPanel";
+import Imovie from "../../data/IMovie";
 
-const Dashboard = (props) => {
-  const movieList = props.movieList;
+type Props = {
+  movieList: Imovie[];
+  className: string,
+  }
+  
+const Dashboard: React.FC<Props> = ({movieList}) => {
 
   const contentJsx = movieList.length ? (
-    <CardList movieList={movieList}  />
+    <CardList movieList={movieList}/>
   ) : (
     <FeedbackPanel
       header="No matches"

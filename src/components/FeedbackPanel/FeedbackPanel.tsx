@@ -1,8 +1,11 @@
 import React from "react";
 import styles from "./FeedbackPanel.module.scss";
+type Props = {
+  header: string,
+  text: string,
+  }
+const FeedbackPanel: React.FC<Props> = ({header, text}) => {
 
-const FeedbackPanel = (props) => {
-  const { header, text } = props;
   return (
     <section className={styles.background}>
       <div className={styles.feedback}>

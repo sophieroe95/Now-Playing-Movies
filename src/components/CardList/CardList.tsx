@@ -1,11 +1,14 @@
 import React from "react";
 import styles from "./CardList.module.scss";
 import Card from "../Card";
- 
-const CardList = (props) => {
-  const {movieList} = props;
-  
-  const getCardJsx = (movie) => (
+import Imovie from "../../data/IMovie";
+
+interface CardListProps {
+ movieList: Imovie[],
+  }
+const CardList: React.FC<CardListProps>= ({movieList}) => {
+
+  const getCardJsx = (movie: Imovie) => (
     <div data-cy="card" className={styles.card} key={movie.id}>
       <Card movie={movie} />
     </div>
